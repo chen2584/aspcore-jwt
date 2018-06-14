@@ -1,0 +1,14 @@
+/Users/chen/MyWork/Dotnet/testJwt/obj/Debug/netcoreapp2.1/testJwt.csprojAssemblyReference.cache
+/Users/chen/MyWork/Dotnet/testJwt/obj/Debug/netcoreapp2.1/testJwt.csproj.CoreCompileInputs.cache
+/Users/chen/MyWork/Dotnet/testJwt/obj/Debug/netcoreapp2.1/testJwt.RazorAssemblyInfo.cache
+/Users/chen/MyWork/Dotnet/testJwt/obj/Debug/netcoreapp2.1/testJwt.RazorAssemblyInfo.cs
+/Users/chen/MyWork/Dotnet/testJwt/obj/Debug/netcoreapp2.1/testJwt.AssemblyInfoInputs.cache
+/Users/chen/MyWork/Dotnet/testJwt/obj/Debug/netcoreapp2.1/testJwt.AssemblyInfo.cs
+/Users/chen/MyWork/Dotnet/testJwt/bin/Debug/netcoreapp2.1/testJwt.deps.json
+/Users/chen/MyWork/Dotnet/testJwt/bin/Debug/netcoreapp2.1/testJwt.runtimeconfig.json
+/Users/chen/MyWork/Dotnet/testJwt/bin/Debug/netcoreapp2.1/testJwt.runtimeconfig.dev.json
+/Users/chen/MyWork/Dotnet/testJwt/bin/Debug/netcoreapp2.1/testJwt.dll
+/Users/chen/MyWork/Dotnet/testJwt/bin/Debug/netcoreapp2.1/testJwt.pdb
+/Users/chen/MyWork/Dotnet/testJwt/obj/Debug/netcoreapp2.1/testJwt.RazorTargetAssemblyInfo.cache
+/Users/chen/MyWork/Dotnet/testJwt/obj/Debug/netcoreapp2.1/testJwt.dll
+/Users/chen/MyWork/Dotnet/testJwt/obj/Debug/netcoreapp2.1/testJwt.pdb
