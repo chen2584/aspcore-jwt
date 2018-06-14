@@ -18,6 +18,8 @@ namespace testJwt.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            //var identity = (ClaimsIdentity)User.Identity;
+            //identity.AddClaim(new Claim(ClaimTypes.Country, "Thailand"));
             foreach(var claim in User.Claims)
             {
                 Console.WriteLine("Claim: " + claim.Type.ToString() + " Value: " + claim.Value.ToString());
