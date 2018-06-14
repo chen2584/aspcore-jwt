@@ -41,12 +41,15 @@ namespace testJwt
                 audience: Configuration["JwtAuthentication:Audience"],
                 signingCredentials: credentials,
                 expires: DateTime.Now.AddMinutes(30),
-                claims: new[]
+                claims: new Claim[]
                 {
                     //Add more Claims
-                    new Claim(JwtRegisteredClaimNames.Sub, "Sub", "admin"),
-                    new Claim(JwtRegisteredClaimNames.Email, "Email","worameth.semapat@gmail.com"),
-                    new Claim(JwtRegisteredClaimNames.Website, "Website", "chen2584.github.io"),
+                    new Claim(JwtRegisteredClaimNames.Sub, "Chen Angolo"),
+                    new Claim(JwtRegisteredClaimNames.Email,"worameth.semapat@gmail.com"),
+                    new Claim(JwtRegisteredClaimNames.Website, "chen2584.github.io"),
+                    new Claim(ClaimTypes.Role, "Developer"),
+                    new Claim(ClaimTypes.Role, "Administrator"),
+                    new Claim(ClaimTypes.Name, "Chen Angelo")
 
                 }
             );

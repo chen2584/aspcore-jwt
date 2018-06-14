@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,7 +39,8 @@ namespace testJwt
                     ValidateLifetime = true,
                     ValidIssuer = Configuration["JwtAuthentication:Issuer"],
                     ValidAudience = Configuration["JwtAuthentication:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JwtAuthentication:SecurityKey"]))
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JwtAuthentication:SecurityKey"])),
+                    //NameClaimType = JwtRegisteredClaimNames.Sub,
                 };
             });
 

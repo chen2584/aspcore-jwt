@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,12 +20,18 @@ namespace testJwt.Controllers
         {
             foreach(var claim in User.Claims)
             {
-                Console.WriteLine("Claim: " + claim.ToString());
+                Console.WriteLine("Claim: " + claim.Type.ToString() + " Value: " + claim.Value.ToString());
             }
-            return new string[] { "value1", "value2", User.Claims.Count().ToString() };
+            var contain = User.Claims.Any(claim => claim.Type == ClaimTypes.Role);
+            var name = HttpContext.User.Claims.FirstOrDefault(claim => claim.Type.Equals(ClaimTypes.Role));
+            
+            Console.WriteLine(User.Identity.Name); //ClaimTypes.Name
+            Console.WriteLine("Developer Role: " + User.IsInRole("Developer"));
+            return new string[] { "value1", "value2", User.Claims.Count().ToString(), contain.ToString(), User.FindFirst(ClaimTypes.Role)?.Value };
         }
 
         // GET api/values/5
+        [Authorize(Roles = "User, Developer")]
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
